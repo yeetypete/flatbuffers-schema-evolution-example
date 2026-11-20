@@ -89,7 +89,7 @@ fn main() {
             (
                 "charge_percent",
                 format!("{CHARGE_PERCENT:?}"),
-                "no accessor".to_owned(),
+                "no accessor (deprecated)".to_owned(),
             ),
             (
                 "charge_state",
@@ -130,12 +130,12 @@ fn main() {
             (
                 "charge_state",
                 format!("{CHARGE_STATE:?}"),
-                "unknown to v1".to_owned(),
+                "ignored (not in v1)".to_owned(),
             ),
             (
                 "temperature",
                 format!("{TEMPERATURE:?}"),
-                "unknown to v1".to_owned(),
+                "ignored (not in v1)".to_owned(),
             ),
         ],
     );

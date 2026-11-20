@@ -28,7 +28,7 @@ Backwards compatible: v2 code reads v1 data.
   field           written by v1   read by v2
   voltage         24.1            24.1
   current         1.5             1.5
-  charge_percent  87.0            no accessor
+  charge_percent  87.0            no accessor (deprecated)
   charge_state    absent          0.0 (default)
   temperature     absent          None (default)
 
@@ -38,8 +38,8 @@ Forwards compatible: v1 code reads v2 data.
   voltage         24.1            24.1
   current         1.5             1.5
   charge_percent  absent          0.0 (default)
-  charge_state    0.87            unknown to v1
-  temperature     35.0            unknown to v1
+  charge_state    0.87            ignored (not in v1)
+  temperature     35.0            ignored (not in v1)
 ```
 
 ## Conclusions

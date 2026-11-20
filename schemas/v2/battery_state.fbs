@@ -1,0 +1,24 @@
+// Evolved from v1 following the FlatBuffers schema evolution rules.
+// See https://flatbuffers.dev/evolution/
+
+/// State of a battery.
+table BatteryState {
+  /// Battery voltage in volts.
+  voltage:float (id: 0);
+
+  /// Battery current in amps.
+  current:float (id: 1);
+
+  /// Replaced by charge_state. Marking a field as deprecated keeps
+  /// its id reserved so no other field can reuse it.
+  charge_percent:float (id: 2, deprecated);
+
+  /// Remaining charge from 0.0 to 1.0.
+  charge_state:float (id: 3);
+
+  /// Battery temperature in degrees Celsius. The default value is
+  /// set to null so readers can tell an absent value from 0.0.
+  temperature:float = null (id: 4);
+}
+
+root_type BatteryState;

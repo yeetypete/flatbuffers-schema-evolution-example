@@ -1,0 +1,15 @@
+// Battery telemetry.
+
+/// State of a battery.
+table BatteryState {
+  /// Battery voltage in volts.
+  voltage:float (id: 0);
+
+  /// Battery current in amps.
+  current:float (id: 1);
+
+  /// Remaining charge from 0 to 100.
+  charge_percent:float (id: 2);
+}
+
+root_type BatteryState;

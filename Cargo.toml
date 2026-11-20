@@ -1,0 +1,21 @@
+[package]
+name = "flatbuffers-schema-evolution-example"
+version = "0.1.0"
+edition = "2024"
+description = "FlatBuffers schema evolution example."
+publish = false
+
+[lints.clippy]
+dbg_macro = "warn"
+exit = "warn"
+pedantic = { level = "warn", priority = -1 }
+print_stderr = "warn"
+todo = "warn"
+
+[lints.rust]
+missing_debug_implementations = "warn"
+unsafe_code = "deny"
+
+[dependencies]
+# NOTE: keep in sync with flatc version from flake.
+flatbuffers = "=25.12.19"

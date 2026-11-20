@@ -17,7 +17,7 @@ table BatteryState {
   charge_state:float (id: 3);
 
   /// Battery temperature in degrees Celsius. The default value is
-  /// set to null so readers can tell an absent value from 0.0.
+  /// set to null so readers can differentiate an absent value from 0.0.
   temperature:float = null (id: 4);
 }
 

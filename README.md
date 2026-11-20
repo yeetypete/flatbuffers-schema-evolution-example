@@ -47,8 +47,9 @@ Forwards compatible: v1 code reads v2 data.
 - Schema evolution does not require the schema definitions at runtime. Each
   program only uses the accessors generated from its own schema version. The
   buffer itself records which fields were written.
-- Use `null` defaults in scalar field definitions so readers can differentiate
-  between absent values and real ones. For example, reading v2 data with v1 code
-  returns `charge_percent` as `0.0`, and reading v1 data with v2 code returns
-  `charge_state` as `0.0`. Both look like an empty battery. `temperature` uses a
-  `null` default, so v2 code reading v1 data gets `None` instead.
+- Use `null` [defaults](https://flatbuffers.dev/schema/) in scalar field
+  definitions so readers can differentiate between absent values and real ones.
+  For example, reading v2 data with v1 code returns `charge_percent` as `0.0`,
+  and reading v1 data with v2 code returns `charge_state` as `0.0`. Both look
+  like an empty battery. `temperature` uses a `null` default, so v2 code reading
+  v1 data gets `None` instead.
